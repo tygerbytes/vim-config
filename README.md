@@ -17,3 +17,11 @@ From a PowerShell prompt:
 cd $HOME; git clone git@github.com:tygerbytes/vim-config.git vimfiles; .\vimfiles\setup.ps1
 ```
 
+### Both
+After cloning the repo, make sure to initialize and update the submodules:
+
+```Bash
+git submodule init
+git submodule update
+
+```

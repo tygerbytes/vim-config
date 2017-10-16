@@ -1,3 +1,3 @@
 #!/bin/bash
-cp vimrc.template ~/.vimrc
+cp ~/.vim/vimrc.template ~/.vimrc
 
