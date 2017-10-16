@@ -1,0 +1,7 @@
+
+if isdirectory(expand("~") . "/vimfiles")
+    source ~/vimfiles/tyger-vimrc.vim
+else
+    source ~/.vim/tyger-vimrc.vim
+endif
+
