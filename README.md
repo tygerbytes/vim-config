@@ -6,9 +6,14 @@ I keep my Vim config in this repo to enjoy a consistently wonderful Vim experien
 Here are simple commands for installing my vim config on a fresh *nix or Windows system.
 
 ### *Nix
-`cd ~ && git clone git@github.com:tygerbytes/vim-config.git .vim && ./.vim/setup.sh`
+```Bash
+cd ~ && git clone git@github.com:tygerbytes/vim-config.git .vim && ./.vim/setup.sh
+```
 
 ### Windows
 From a PowerShell prompt:
-`cd $HOME; git clone git@github.com:tygerbytes/vim-config.git vimfiles; .\vimfiles\setup.ps1`
+
+```PowerShell
+cd $HOME; git clone git@github.com:tygerbytes/vim-config.git vimfiles; .\vimfiles\setup.ps1
+```
 
