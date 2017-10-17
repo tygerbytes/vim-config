@@ -7,21 +7,12 @@ Here are simple commands for installing my vim config on a fresh *nix or Windows
 
 ### *Nix
 ```Bash
-cd ~ && git clone git@github.com:tygerbytes/vim-config.git .vim && ./.vim/setup.sh
+cd ~ && git clone --recursive git@github.com:tygerbytes/vim-config.git .vim && ./.vim/setup.sh
 ```
 
 ### Windows
 From a PowerShell prompt:
 
 ```PowerShell
-cd $HOME; git clone git@github.com:tygerbytes/vim-config.git vimfiles; .\vimfiles\setup.ps1
-```
-
-### Both
-After cloning the repo, make sure to initialize and update the submodules:
-
-```Bash
-git submodule init
-git submodule update
-
+cd $HOME; git clone --recursive git@github.com:tygerbytes/vim-config.git vimfiles; .\vimfiles\setup.ps1
 ```
