@@ -107,6 +107,8 @@ if has("gui_running")
     colorscheme solarized
     " Remove the ugly toolbar
     set guioptions-=T
+    " Open GUI maximized
+    au GUIEnter * simalt ~x
 endif
 
 set backup
