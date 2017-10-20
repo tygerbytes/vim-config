@@ -130,7 +130,10 @@ set nrformats=
 
 set wildmenu
 
-let g:ctrlp_map = '<c-p>'
+let mapleader = ","
+
+" -- CtrlP
+let g:ctrlp_map = '<leader>,'
 let g:ctrlp_cmd = 'CtrlP'
 
 " Pathogen is a plugin for making it easy to load other plugins
