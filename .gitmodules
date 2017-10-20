@@ -19,3 +19,6 @@
 [submodule "vim-repeat"]
 	path = vim-repeat
 	url = https://github.com/tpope/vim-repeat
+[submodule "vim-polyglot"]
+	path = vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot
