@@ -16,3 +16,6 @@
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = git@github.com:scrooloose/nerdtree.git
+[submodule "vim-repeat"]
+	path = vim-repeat
+	url = https://github.com/tpope/vim-repeat
