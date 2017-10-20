@@ -136,6 +136,10 @@ let mapleader = ","
 let g:ctrlp_map = '<leader>,'
 let g:ctrlp_cmd = 'CtrlP'
 
+set ignorecase
+set smartcase
+
+
 " Pathogen is a plugin for making it easy to load other plugins
 execute pathogen#infect()
 
