@@ -13,3 +13,6 @@ Session.vim
 # Auto-generated tag files
 tags
 
+# Spelling index (regen by adding/deleting a word: zg/zug)
+*.spl
+
