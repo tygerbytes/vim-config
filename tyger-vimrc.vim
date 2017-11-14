@@ -141,6 +141,8 @@ let g:ctrlp_lazy_update = 5
 nnoremap <leader>m :CtrlPMRUFiles<CR>
 let g:ctrlp_mruf_max = 2000
 
+map <leader>j :NERDTreeToggle<CR>
+
 set ignorecase
 set smartcase
 
