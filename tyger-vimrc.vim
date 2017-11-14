@@ -149,7 +149,9 @@ set smartcase
 " use git for indexing
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
 
-
 " Pathogen is a plugin for making it easy to load other plugins
 execute pathogen#infect()
+
+" Close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
