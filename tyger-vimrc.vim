@@ -109,6 +109,8 @@ if has("gui_running")
     set guioptions-=T
     " Open GUI maximized
     au GUIEnter * simalt ~x
+    " Remove scrollbars so gvim doesn't jump around when splitting the screen
+    set guioptions-=r guioptions-=L
 endif
 
 set backup
