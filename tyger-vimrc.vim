@@ -143,7 +143,12 @@ let g:ctrlp_lazy_update = 5
 nnoremap <leader>m :CtrlPMRUFiles<CR>
 let g:ctrlp_mruf_max = 2000
 
+" -- NERDTree
 map <leader>j :NERDTreeToggle<CR>
+
+" -- vim-fugitive
+map <leader>d :Gdiff<CR>
+map <leader>g :Git
 
 set ignorecase
 set smartcase
