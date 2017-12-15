@@ -96,14 +96,6 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
-set guifont=Consolas:h13 "Hack"
-colorscheme solarized
-set background=dark
-
-syntax enable
-
-set number
-
 if has("gui_running")
     " Remove the ugly toolbar
     set guioptions-=T
@@ -111,7 +103,18 @@ if has("gui_running")
     au GUIEnter * simalt ~x
     " Remove scrollbars so gvim doesn't jump around when splitting the screen
     set guioptions-=r guioptions-=L
+else
+    " For the following to work, make sure $TERM supports 256 colors
+    " (xterm-256color, for example)
+    let g:solarized_termcolors=256
 endif
+
+set guifont=Consolas:h13 "Hack"
+colorscheme solarized
+set background=dark
+
+syntax enable
+set number
 
 set backup
 set backupdir=$TMP
@@ -132,6 +135,9 @@ set nrformats=
 
 set wildmenu
 
+set ignorecase
+set smartcase
+
 let mapleader = ","
 
 " -- CtrlP
@@ -142,6 +148,8 @@ let g:ctrlp_use_caching = 0
 let g:ctrlp_lazy_update = 5
 nnoremap <leader>m :CtrlPMRUFiles<CR>
 let g:ctrlp_mruf_max = 2000
+" use git for indexing
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
 
 " -- NERDTree
 map <leader>j :NERDTreeToggle<CR>
@@ -150,13 +158,12 @@ map <leader>j :NERDTreeToggle<CR>
 map <leader>d :Gdiff<CR>
 map <leader>g :Git
 
-set ignorecase
-set smartcase
+" -- editorconfig
+" Make sure it works with fugitive
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
-" use git for indexing
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
 
-" Pathogen is a plugin for making it easy to load other plugins
+" Load plugins via Pathogen
 execute pathogen#infect()
 
 " Close vim if the only window left open is a NERDTree
