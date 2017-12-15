@@ -97,14 +97,14 @@ if !exists(":DiffOrig")
 endif
 
 set guifont=Consolas:h13 "Hack"
+colorscheme solarized
+set background=dark
 
 syntax enable
 
 set number
 
 if has("gui_running")
-    set background=dark
-    colorscheme solarized
     " Remove the ugly toolbar
     set guioptions-=T
     " Open GUI maximized
