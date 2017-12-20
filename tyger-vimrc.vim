@@ -116,19 +116,11 @@ set background=dark
 syntax enable
 set number
 
-set backup
-set backupdir=$TMP
-set backupskip=$TMP\\*
-set directory=$TMP
-set writebackup
-
 " No word wrap by default
 set wrap!
 
 " use four spaces for tabs
 set shiftwidth=4 softtabstop=4 expandtab
-
-set undodir=$TMP
 
 " Treat all numerals as decimals, regardless of whether they are padded with zeroes.
 set nrformats=
