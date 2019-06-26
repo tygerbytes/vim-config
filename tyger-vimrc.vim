@@ -32,6 +32,10 @@ set number
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 
+let backupdir="$HOME/.vimtemp/"
+let directory="$HOME/.vimtemp/"
+let undodir="$HOME/.vimtemp/"
+
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
 
@@ -100,7 +104,7 @@ if has("gui_running")
     " Remove the ugly toolbar
     set guioptions-=T
     " Open GUI maximized
-    au GUIEnter * simalt ~x
+    " au GUIEnter * simalt ~x
     " Remove scrollbars so gvim doesn't jump around when splitting the screen
     set guioptions-=r guioptions-=L
 else
@@ -118,6 +122,8 @@ set number
 
 " No word wrap by default
 set wrap!
+
+set spell
 
 " use four spaces for tabs
 set shiftwidth=4 softtabstop=4 expandtab
