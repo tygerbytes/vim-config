@@ -132,23 +132,8 @@ set smartcase
 
 let mapleader = ","
 
-" -- CtrlP
-let g:ctrlp_map = '<leader>,'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_by_filename = 1
-let g:ctrlp_use_caching = 0
-let g:ctrlp_lazy_update = 5
-nnoremap <leader>m :CtrlPMRUFiles<CR>
-let g:ctrlp_mruf_max = 2000
-" use git for indexing
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
-
 " -- NERDTree
 map <leader>j :NERDTreeToggle<CR>
-
-" -- vim-fugitive
-map <leader>d :Gdiff<CR>
-map <leader>g :Git
 
 " -- editorconfig
 " Make sure it works with fugitive
